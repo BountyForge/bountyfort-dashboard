@@ -1,61 +1,67 @@
 # BountyFort Dashboard
 
-BountyFort Dashboard is a professional web interface for managing decentralised bounty workflows on the Stellar network. It provides a comprehensive suite of tools for maintainers, reviewers, and contributors to interact with the BountyFort smart contracts.
+[![Next.js](https://img.shields.io/badge/Framework-Next.js-black.svg)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript-blue.svg)](https://www.typescriptlang.org/)
+[![Stellar](https://img.shields.io/badge/Network-Stellar-blue.svg)](https://stellar.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## Features
+BountyFort Dashboard is a high-performance, professional command center for the BountyFort protocol. Designed for the Stellar ecosystem, it provides project maintainers, reviewers, and contributors with a streamlined interface to manage decentralized bounty workflows with precision and clarity.
 
-- **Consolidated Dashboard**: High-level overview of bounty activity and escrow stats.
-- **Bounty Management**: Create, fund, and manage bounties with custom assets and deadlines.
-- **Contributor Workflow**: Submit work references and track submission status.
-- **Review & Payout**: Dedicated interface for reviewers to approve work and trigger on-chain payouts.
-- **Wallet Integration**: Support for Stellar wallet connections (Freighter-ready abstraction).
-- **Responsive Design**: Mobile-optimised interface for on-the-go bounty tracking.
+---
 
-## Tech Stack
+## ✨ Feature Highlights
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Stellar Interaction**: [@stellar/stellar-sdk](https://github.com/stellar/js-stellar-sdk)
+- **Unified Command Center**: Real-time visualization of protocol-wide bounty activity and reward distribution.
+- **Precision Management**: Sophisticated tools for creating, funding, and tracking bounties with custom assets.
+- **Streamlined Submissions**: Dedicated workspace for contributors to submit verified work references and track payout progress.
+- **Reviewer Workflow**: Optimized interface for designated reviewers to authorize on-chain distributions.
+- **Wallet-Agnostic Core**: Robust abstraction layer prepared for Freighter and other Stellar-compatible wallets.
+- **Institutional-Grade UI**: Responsive, accessible interface built with Tailwind CSS and shadcn/ui.
 
-## Getting Started
+## 🛠️ Technology Stack
 
-### Prerequisites
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | Next.js 14 (App Router), React 18 |
+| **Logic** | TypeScript (Strict Mode) |
+| **Styling** | Tailwind CSS, Lucide Icons |
+| **Components** | shadcn/ui (Radix UI Primitives) |
+| **Stellar SDK** | `@stellar/stellar-sdk` |
+| **Testing** | Vitest (Unit), Playwright (E2E) |
 
-- Node.js 18+
-- npm or yarn
-- A Stellar wallet (e.g., Freighter) for transaction signing
+## 🚀 Getting Started
 
-### Installation
+### Environment Configuration
 
-```bash
-npm install
-```
-
-### Development
-
-1. Copy `.env.example` to `.env.local` and configure your RPC and contract IDs.
-2. Run the development server:
+1. **Clone & Install**:
    ```bash
-   npm run dev
+   npm install
+   ```
+2. **Environment Variables**:
+   Copy `.env.example` to `.env.local` and provide your specific RPC and Contract configurations:
+   ```env
+   NEXT_PUBLIC_SOROBAN_RPC_URL=https://soroban-testnet.stellar.org
+   NEXT_PUBLIC_BOUNTYFORT_CONTRACT_ID=...
    ```
 
-### Testing
+### Development Scripts
 
-```bash
-# Run unit tests
-npm test
+- **Development**: `npm run dev` — Launch the interactive local environment.
+- **Build**: `npm run build` — Generate an optimized production bundle.
+- **Test**: `npm run test` — Execute the Vitest unit testing suite.
+- **E2E**: `npm run test:e2e` — Run Playwright end-to-end user flows.
+- **Lint**: `npm run lint` — Enforce codebase consistency.
 
-# Run E2E tests
-npm run test:e2e
-```
+## 🛡️ Security & Integrity
 
-## Security
+- **Non-Custodial**: The dashboard is a pure interface; private keys are never requested or stored.
+- **Verification**: Always verify transaction payloads in your connected wallet before signing.
+- **Audit**: This dashboard has **not** been formally audited.
+- **Guidance**: See [SECURITY.md](SECURITY.md) for detailed safety protocols.
 
-Please refer to [SECURITY.md](SECURITY.md) for security guidelines. BountyFort Dashboard is an interface to smart contracts; always review transactions in your wallet before signing.
+## 📄 License
 
-## License
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for more information.
 
-MIT License - see [LICENSE](LICENSE) for details.
+---
+*Empowering the next generation of decentralized collaboration on Stellar.*
