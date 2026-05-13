@@ -1,0 +1,80 @@
+import { Bounty, Submission, BountyStats } from '@/types/bounty';
+
+export const MOCK_BOUNTIES: Bounty[] = [
+  {
+    id: '1',
+    title: 'Implement Soroban Token Interface',
+    description: 'We need a complete implementation of the Soroban token interface for our upcoming asset launch.',
+    maintainer: 'G...ABCD',
+    reviewer: 'G...EFGH',
+    asset: 'CAS7...XYZ',
+    amount: '1000',
+    balance: '1000',
+    deadline: Date.now() + 86400000 * 7,
+    metadataHash: 'abc...123',
+    category: 'Development',
+    status: 'Active',
+    createdAt: Date.now() - 86400000 * 2,
+  },
+  {
+    id: '2',
+    title: 'Design Dashboard UI/UX',
+    description: 'Create a high-fidelity design for the BountyFort contributor dashboard.',
+    maintainer: 'G...ABCD',
+    reviewer: 'G...IJKL',
+    asset: 'XLM',
+    amount: '500',
+    balance: '0',
+    deadline: Date.now() + 86400000 * 14,
+    metadataHash: 'def...456',
+    category: 'Design',
+    status: 'Open',
+    createdAt: Date.now() - 86400000,
+  },
+  {
+    id: '3',
+    title: 'Write Technical Documentation',
+    description: 'Comprehensive documentation for the protocol architecture and API.',
+    maintainer: 'G...EFGH',
+    reviewer: 'G...ABCD',
+    asset: 'USDC',
+    amount: '200',
+    balance: '200',
+    deadline: Date.now() - 86400000,
+    metadataHash: 'ghi...789',
+    category: 'Content',
+    status: 'Completed',
+    createdAt: Date.now() - 86400000 * 30,
+  },
+];
+
+export const MOCK_SUBMISSIONS: Submission[] = [
+  {
+    id: '101',
+    bountyId: '1',
+    contributor: 'G...MNOP',
+    workHash: 'xyz...000',
+    workUrl: 'https://github.com/example/repo/pull/1',
+    summary: 'Implemented all core methods and added unit tests.',
+    timestamp: Date.now() - 3600000 * 5,
+    status: 'Pending',
+  },
+  {
+    id: '102',
+    bountyId: '3',
+    contributor: 'G...QRST',
+    workHash: 'uvw...111',
+    workUrl: 'https://docs.example.com',
+    summary: 'Completed all 5 chapters of the technical guide.',
+    timestamp: Date.now() - 86400000 * 2,
+    status: 'Approved',
+  },
+];
+
+export const MOCK_STATS: BountyStats = {
+  openCount: 5,
+  activeCount: 12,
+  completedCount: 45,
+  pendingSubmissions: 8,
+  totalRewardsUSD: '24,500',
+};
